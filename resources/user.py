@@ -1,5 +1,4 @@
 from bson import ObjectId
-from flask import json, jsonify
 from flask import request
 
 from flask_restful import Resource, abort

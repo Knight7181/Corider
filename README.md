@@ -1,6 +1,21 @@
 # Corider Assessment
 This GitHub repository contains a Python Flask application that serves as a basic User Management API. The API allows users to perform CRUD (Create, Read, Update, Delete) operations on user data stored in a MongoDB database. It provides endpoints to get all users, create a new user, retrieve a user by ID, update a user's information, and delete a user by their ID.
 
+## Development Setup
+### Prerequisites
+* python 3
+* Python IDE (PyCharm)
+* Docker
+
+### Local Setup
+```
+docker compose up --build -d
+
+# It uses docker-compose.yaml file to build the docker image for this application and deploys it.
+# It also deploys a mongodb server.
+```
+
+
 ## Key Features:
 
 ### Flask Web Framework:

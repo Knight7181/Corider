@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    image: corider
+    environment:
+      - MONGODB_URL=mongodb://mongodb:27017/corider
+    ports:
+      - '5000:5000'
+    depends_on:
+      - mongodb
+    networks:
+      - app-network
+
+  mongodb:
+    image: mongo:6-jammy
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodbdata:/data/db
+    networks:
+      - app-network
+
+volumes:
+  mongodbdata:
+
+networks:
+  app-network:
+    driver: bridge
