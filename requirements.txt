@@ -1,2 +1,4 @@
-flask
+flask~=2.3.3
 flask_pymongo
+flask-restful
+pymongo~=4.5.0
